@@ -1,12 +1,148 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MedCaliper</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #e0ffff; /* light cyan */
+      line-height: 1.6;
+    }
+
+    header, footer {
+      background-color: #00ffff;
+      color: #000;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    h1, h2, h3 {
+      color: #00ffff;
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .feedback-link {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 1rem;
+      text-align: right;
+    }
+
+    nav a {
+      color: #00ffff;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to MedCaliper</h1>
-  <p>Website coming soon.</p>
+
+  <nav>
+    <a href="#feedback">Feedback</a>
+  </nav>
+
+  <header>
+    <h1>Welcome to MedCaliper</h1>
+    <p>Transforming personalised brain tumour care</p>
+  </header>
+
+  <main>
+    <div class="section">
+      <h2>About MedCaliper</h2>
+      <p>
+        <strong>MedCaliper</strong> is an AI-powered tool we're developing to support personalised brain tumour care.
+        Our aim is to help make clinical decision-making more efficient and better aligned with patient needs.
+        This project is proudly backed by the <strong>LIHE Accelerator Programme</strong>.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Watch Our Video</h2>
+      <div class="video-container">
+        <iframe src="https://player.vimeo.com/video/1091814820?h=fd689aa4c5" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <div class="section" id="feedback">
+      <h2>Feedback</h2>
+
+      <h3>Clinicians</h3>
+      <p>
+        If you're a clinician working with brain tumours, we'd love to hear your thoughts.
+        Your insights are incredibly valuable in shaping MedCaliper into a tool that truly makes a difference in practice.
+      </p>
+      <p>
+        👉 <a href="https://vimeo.com/1091814820" target="_blank">Watch the video here</a>
+        <span class="feedback-link">📝 <a href="https://research.typeform.com/to/GzGrkyqS" target="_blank">Give Clinician Feedback</a></span>
+      </p>
+
+      <h3>Patients</h3>
+      <p>
+        Ultimately, our work is driven by a deep commitment to patient-centred care.
+        Your feedback is important for us to continue improving this tool, ensuring it truly meets the needs of patients and families.
+      </p>
+      <p>
+        📝 <a href="https://research.typeform.com/to/S9jVlFra" target="_blank">Give Patient Feedback</a>
+      </p>
+      <p>
+        Please consider sharing this with anyone who might find hope or benefit from understanding these advancements in brain tumour care.
+      </p>
+
+      <p>
+        For any questions, reach out at <a href="mailto:info@medcaliper.co.uk">info@medcaliper.co.uk</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 MedCaliper | All rights reserved
+  </footer>
+
 </body>
 </html>
