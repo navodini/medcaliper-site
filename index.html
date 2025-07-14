@@ -9,22 +9,22 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-color: #050f2d;
       color: #e0ffff;
       line-height: 1.6;
       overflow-x: hidden;
     }
 
     header, footer {
-      background-color: rgba(41, 46, 46, 0.95);
-      color: #fff;
+      background-color: rgba(10, 20, 50, 0.95);
+      color: #ffffff;
       padding: 2rem 1rem;
       text-align: center;
-      box-shadow: 0 2px 10px rgba(0, 255, 255, 0.15);
+      box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
     }
 
     header h1 {
-      margin: 0;
+      margin: 0.5rem 0 0;
       font-size: 2.5rem;
     }
 
@@ -32,18 +32,24 @@
       font-style: italic;
       font-weight: 300;
       margin-top: 0.5rem;
-      color: #ccc;
+      color: #b0c4de;
+    }
+
+    .logo {
+      width: 80px;
+      height: auto;
+      margin-bottom: 1rem;
     }
 
     nav {
-      background-color: #111;
+      background-color: #071535;
       padding: 1rem;
       text-align: right;
       box-shadow: 0 2px 6px rgba(0, 255, 255, 0.1);
     }
 
     nav a {
-      color: #00ffff;
+      color: #00e5ff;
       margin-left: 1.5rem;
       text-decoration: none;
       font-weight: 600;
@@ -51,7 +57,7 @@
     }
 
     nav a:hover {
-      color: #fff;
+      color: #ffffff;
     }
 
     main {
@@ -63,26 +69,26 @@
     .section {
       background: rgba(0, 255, 255, 0.05);
       backdrop-filter: blur(6px);
-      border: 1px solid rgba(0, 255, 255, 0.15);
+      border: 1px solid rgba(0, 255, 255, 0.12);
       padding: 2rem;
       border-radius: 20px;
       margin-bottom: 2.5rem;
-      box-shadow: 0 4px 20px rgba(0, 255, 255, 0.05);
+      box-shadow: 0 4px 20px rgba(0, 255, 255, 0.04);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .section:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 255, 255, 0.1);
+      box-shadow: 0 8px 25px rgba(0, 255, 255, 0.08);
     }
 
     h2, h3 {
-      color: #00ffff;
+      color: #00e5ff;
       margin-top: 0;
     }
 
     a {
-      color: #00ffff;
+      color: #00e5ff;
       text-decoration: underline;
     }
 
@@ -92,7 +98,7 @@
       height: 0;
       overflow: hidden;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.15);
     }
 
     .video-container iframe {
@@ -108,7 +114,7 @@
       display: inline-block;
       margin-top: 1rem;
       padding: 0.75rem 1.5rem;
-      background: #00ffff;
+      background: #00e5ff;
       color: #000;
       border-radius: 30px;
       font-weight: bold;
@@ -117,7 +123,7 @@
     }
 
     .feedback-link:hover {
-      background: #00cccc;
+      background: #00bcd4;
       transform: scale(1.05);
     }
 
@@ -150,8 +156,10 @@
   </nav>
 
   <header>
+    <!-- Replace 'logo.png' with your actual logo file path -->
+    <img src="logo.svg" alt="MedCaliper Logo" class="logo">
     <h1>
-      <span style="color: #ffffff;">Welcome to</span> <span style="color: #00ffff;">medCaliper</span>
+      <span style="color: #ffffff;">Welcome to</span> <span style="color: #00e5ff;">medCaliper</span>
     </h1>
     <p>Transforming personalised brain tumour care</p>
   </header>
