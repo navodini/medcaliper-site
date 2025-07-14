@@ -10,22 +10,27 @@
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #050f2d;
-      color: #e0ffff;
+      color: #e6f0f2;
       line-height: 1.6;
       overflow-x: hidden;
     }
 
     header, footer {
-      background-color: rgba(10, 20, 50, 0.95);
+      background-color: #000;
       color: #ffffff;
       padding: 2rem 1rem;
       text-align: center;
-      box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+      box-shadow: 0 2px 10px rgba(0, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    header h1 {
-      margin: 0.5rem 0 0;
-      font-size: 2.5rem;
+    .logo {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      margin-bottom: 1rem;
     }
 
     header p {
@@ -35,14 +40,8 @@
       color: #b0c4de;
     }
 
-    .logo {
-      width: 80px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-
     nav {
-      background-color: #071535;
+      background-color: #000;
       padding: 1rem;
       text-align: right;
       box-shadow: 0 2px 6px rgba(0, 255, 255, 0.1);
@@ -67,19 +66,18 @@
     }
 
     .section {
-      background: rgba(0, 255, 255, 0.05);
-      backdrop-filter: blur(6px);
+      background: rgba(0, 0, 0, 0.3);
       border: 1px solid rgba(0, 255, 255, 0.12);
       padding: 2rem;
       border-radius: 20px;
       margin-bottom: 2.5rem;
-      box-shadow: 0 4px 20px rgba(0, 255, 255, 0.04);
+      box-shadow: 0 4px 20px rgba(0, 255, 255, 0.03);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .section:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 255, 255, 0.08);
+      box-shadow: 0 8px 25px rgba(0, 255, 255, 0.07);
     }
 
     h2, h3 {
@@ -146,6 +144,10 @@
         width: 100%;
         text-align: center;
       }
+
+      .logo {
+        max-width: 160px;
+      }
     }
   </style>
 </head>
@@ -156,11 +158,8 @@
   </nav>
 
   <header>
-    <!-- Replace 'logo.png' with your actual logo file path -->
+    <!-- Replace with your actual logo file or hosted image -->
     <img src="logo.svg" alt="MedCaliper Logo" class="logo">
-    <h1>
-      <span style="color: #ffffff;">Welcome to</span> <span style="color: #00e5ff;">medCaliper</span>
-    </h1>
     <p>Transforming personalised brain tumour care</p>
   </header>
 
