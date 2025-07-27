@@ -1,132 +1,230 @@
-<!DOCTYPE HTML>
-<!--
-	Modified Eventually by HTML5 UP for MedCaliper
-	html5up.net | @ajlkn
-	Customized with medCaliper styles and content
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>MedCaliper – Launching Soon</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&family=Roboto+Slab:wght@400;700&family=Winky+Rough&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<style>
-		body {
-			margin: 0;
-			font-family: 'IBM Plex Sans', sans-serif;
-			background-color: #010511;
-			color: #e6f0f2;
-			line-height: 1.6;
-			overflow-x: hidden;
-		}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>medCaliper</title>
+  
+  <!-- Load IBM Plex Sans for body and Roboto Slab for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&family=Roboto+Slab:wght@400;700&family=Winky+Rough&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      background-color: #010511;
+      color: #e6f0f2;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-		header#header {
-			height: 60vh;
-			background-color: #020618;
-			color: #ffffff;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			padding: 1rem;
-			text-align: center;
-			box-shadow: 0 2px 10px rgba(0, 255, 255, 0.08);
-		}
+    header {
+      height: 60vh;
+      background-color: #020618;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 255, 255, 0.08);
+    }
 
-		header#header img.logo {
-			max-width: 620px;
-			width: 100%;
-			height: auto;
-			margin-bottom: 1rem;
-		}
+    .logo {
+      max-width: 620px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
 
-		header#header p {
-			font-family: 'Winky Rough', cursive;
-			font-style: italic;
-			color: #b0c4de;
-			font-size: 2rem;
-			max-width: 90%;
-		}
+    header p {
+      font-family: 'Winky Rough', cursive;
+      font-style: italic;
+      color: #b0c4de;
+      font-size: 2rem;
+      max-width: 90%;
+    }
 
-		#signup-form {
-			text-align: center;
-			margin-top: 2rem;
-		}
+    nav {
+      background-color: #010511;
+      padding: 1rem;
+      text-align: right;
+      box-shadow: 0 2px 6px rgba(0, 255, 255, 0.1);
+    }
 
-		#signup-form input[type="email"] {
-			padding: 0.8rem;
-			border-radius: 8px;
-			border: none;
-			width: 250px;
-			margin-right: 10px;
-		}
+    nav a {
+      color: #00e5ff;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
 
-		#signup-form input[type="submit"] {
-			background: #00e5ff;
-			color: #000;
-			padding: 0.8rem 1.5rem;
-			border: none;
-			border-radius: 8px;
-			font-weight: bold;
-			cursor: pointer;
-			transition: background 0.3s ease;
-		}
+    nav a:hover {
+      color: #ffffff;
+    }
 
-		#signup-form input[type="submit"]:hover {
-			background: #00bcd4;
-		}
+    main {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
 
-		footer#footer {
-			font-size: 0.9rem;
-			padding: 1.5rem 1rem;
-			text-align: center;
-			background-color: #020618;
-			color: #ffffff;
-		}
+    .section {
+      background-color: #02091f;
+      border: 1px solid rgba(0, 255, 255, 0.12);
+      padding: 2rem;
+      border-radius: 20px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 20px rgba(0, 255, 255, 0.03);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-		footer .icons a {
-			color: #00e5ff;
-			margin: 0 0.5rem;
-			font-size: 1.2rem;
-			text-decoration: none;
-			transition: color 0.3s ease;
-		}
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 255, 255, 0.07);
+    }
 
-		footer .icons a:hover {
-			color: #ffffff;
-		}
-	</style>
+    h2, h3 {
+      font-family: 'Roboto Slab', serif;
+      color: #00e5ff;
+      margin-top: 0;
+    }
+
+    a {
+      color: #00e5ff;
+      text-decoration: underline;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.15);
+      margin-top: 1.5rem;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      border: none;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .feedback-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: #00e5ff;
+      color: #000;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .feedback-link:hover {
+      background: #00bcd4;
+      transform: scale(1.05);
+    }
+
+    footer {
+      font-size: 0.9rem;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      background-color: #020618;
+      color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        text-align: center;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 0.5rem;
+      }
+
+      .feedback-link {
+        width: 100%;
+        text-align: center;
+      }
+
+      .logo {
+        max-width: 300px;
+      }
+    }
+  </style>
 </head>
-<body class="is-preload">
+<body>
 
-	<!-- Header -->
-	<header id="header">
-		<img src="logo.svg" alt="MedCaliper Logo" class="logo" />
-		<p>Transforming personalised brain tumour care</p>
-	</header>
+  <nav>
+    <a href="#feedback">Feedback</a>
+  </nav>
 
-	<!-- Signup Form -->
-	<form id="signup-form" method="post" action="#">
-		<input type="email" name="email" id="email" placeholder="Your Email Address" />
-		<input type="submit" value="Notify Me" />
-	</form>
+  <header>
+    <img src="logo.svg" alt="MedCaliper Logo" class="logo">
+    <p>Transforming personalised brain tumour care</p>
+  </header>
 
-	<!-- Footer -->
-	<footer id="footer">
-		<ul class="icons">
-			<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-			<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-			<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-			<li><a href="mailto:info@medcaliper.co.uk" class="icon fa-envelope"><span class="label">Email</span></a></li>
-		</ul>
-		<ul class="copyright">
-			<li>&copy; 2025 MedCaliper</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
-		</ul>
-	</footer>
+  <main>
+    <div class="section">
+      <h2>About medCaliper</h2>
+      <p>
+        <strong>medCaliper</strong> is an AI-powered tool we're developing to support personalised brain tumour care.
+        Our aim is to help make clinical decision-making more efficient and better aligned with patient needs.
+        This project is proudly backed by the <strong>King's College London LIHE Accelerator Programme</strong>.
+      </p>
+    </div>
 
-	<!-- Scripts -->
-	<script src="assets/js/main.js"></script>
+    <div class="section">
+      <h2>Watch Our Video</h2>
+      <div class="video-container">
+        <video controls>
+          <source src="MedCaliper Explainer Video 050625.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="section" id="feedback">
+      <h2>Feedback</h2>
+
+      <h3>Clinicians</h3>
+      <p>
+        If you're a clinician working with brain tumours, we'd love to hear your thoughts.
+        Your insights are incredibly valuable in shaping MedCaliper into a tool that truly makes a difference in practice.
+      </p>
+      <a href="https://research.typeform.com/to/GzGrkyqS" class="feedback-link" target="_blank">
+        📝 Give Clinician Feedback
+      </a>
+
+      <h3 style="margin-top:2rem;">Patients</h3>
+      <p>
+        Ultimately, our work is driven by a deep commitment to patient-centred care.
+        Your feedback is important for us to continue improving this tool, ensuring it truly meets the needs of patients and families.
+      </p>
+      <a href="https://research.typeform.com/to/S9jVlFra" class="feedback-link" target="_blank">
+        📝 Give Patient Feedback
+      </a>
+
+      <p style="margin-top: 1.5rem;">
+        Please consider sharing this with anyone who might benefit from understanding these advancements in brain tumour care.
+      </p>
+
+      <p>
+        For any questions, reach out at <a href="mailto:info@medcaliper.co.uk">info@medcaliper.co.uk</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 MedCaliper | All rights reserved
+  </footer>
 
 </body>
 </html>
