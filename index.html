@@ -111,6 +111,12 @@
     .nav-logo {
       height: 40px;
       width: auto;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-logo.visible {
+      opacity: 1;
     }
 
     .nav-links {
@@ -270,7 +276,7 @@
 <body>
 
   <nav>
-    <img src="logo.svg" alt="MedCaliper Logo" class="nav-logo">
+    <img src="logo.svg" alt="MedCaliper Logo" class="nav-logo" id="navLogo">
     <div class="nav-links">
       <a href="#about">About Us</a>
       <a href="#feedback">Feedback</a>
@@ -385,6 +391,21 @@
   <footer>
     &copy; 2025 MedCaliper | All rights reserved
   </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const navLogo = document.getElementById('navLogo');
+      const scrollPosition = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      
+      // Show logo when scrolled past the first page (header section)
+      if (scrollPosition > viewportHeight * 0.8) {
+        navLogo.classList.add('visible');
+      } else {
+        navLogo.classList.remove('visible');
+      }
+    });
+  </script>
 
 </body>
 </html>
