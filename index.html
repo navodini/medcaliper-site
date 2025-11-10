@@ -79,28 +79,19 @@
       font-size: 2.5rem;
       max-width: 90%;
       margin-bottom: 3rem;
-      overflow: hidden;
-      border-right: 2px solid #07bab5;
-      white-space: nowrap;
-      animation: typewriter 4s steps(30) 1s forwards, blink 1s infinite 5s;
-      width: 0;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.2s ease-out 1.5s forwards;
     }
 
-    @keyframes typewriter {
+    @keyframes fadeInUp {
       from {
-        width: 0;
+        opacity: 0;
+        transform: translateY(30px);
       }
       to {
-        width: 100%;
-      }
-    }
-
-    @keyframes blink {
-      0%, 50% {
-        border-color: #07bab5;
-      }
-      51%, 100% {
-        border-color: transparent;
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
@@ -306,7 +297,8 @@
 
       header p {
         font-size: 1.8rem;
-        animation: typewriter 3s steps(25) 1s forwards, blink 1s infinite 4s;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease-out 1.2s forwards;
       }
 
       .scroll-indicator {
