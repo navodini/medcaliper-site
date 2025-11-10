@@ -9,9 +9,7 @@
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <!-- Safari pinned tab (monochrome SVG) -->
   <link rel="mask-icon" href="icon.svg" color="#07bab5">
-  <!-- PNG fallback for older browsers / devices -->
-  <link rel="icon" href="favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
   <!-- Load Urbanist and Public Sans fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&family=Public+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
@@ -145,6 +143,7 @@
       width: auto;
       opacity: 0;
       transition: opacity 0.6s ease 0.3s;
+      cursor: pointer;
     }
 
     .nav-logo.visible {
@@ -414,7 +413,7 @@
 <body>
 
   <nav>
-    <img src="logo.svg" alt="MedCaliper Logo" class="nav-logo" id="navLogo">
+    <img src="logo.svg" alt="MedCaliper Logo" class="nav-logo" id="navLogo" style="cursor: pointer;">
     <div class="nav-links">
       <a href="#about">About Us</a>
       <a href="#team">Team</a>
@@ -604,6 +603,14 @@
             behavior: 'smooth'
           });
         }
+      });
+    });
+
+    // Add click functionality to nav logo to scroll to top
+    document.getElementById('navLogo').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
       });
     });
   </script>
