@@ -264,6 +264,50 @@
       margin-bottom: 1rem;
     }
 
+    .team-card {
+      background-color: rgba(5, 60, 104, 0.4);
+      padding: 2rem;
+      border-radius: 20px;
+      border: 1px solid rgba(7, 186, 181, 0.2);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(7, 186, 181, 0.15);
+    }
+
+    .team-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1.5rem;
+      border: 3px solid #07bab5;
+      display: block;
+    }
+
+    .team-card h4 {
+      font-family: 'Urbanist', sans-serif;
+      color: #07bab5;
+      margin: 0 0 0.5rem 0;
+      font-size: 1.4rem;
+    }
+
+    .team-title {
+      color: #eaf3f4;
+      font-style: italic;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .team-description {
+      color: #eaf3f4;
+      line-height: 1.6;
+      text-align: left;
+    }
+
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -304,6 +348,19 @@
       .scroll-indicator {
         font-size: 1rem;
       }
+
+      .team-photo {
+        width: 120px;
+        height: 120px;
+      }
+
+      .team-card h4 {
+        font-size: 1.2rem;
+      }
+
+      .team-title {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -313,6 +370,7 @@
     <img src="logo.svg" alt="MedCaliper Logo" class="nav-logo" id="navLogo">
     <div class="nav-links">
       <a href="#about">About Us</a>
+      <a href="#team">Team</a>
       <a href="#feedback">Feedback</a>
     </div>
   </nav>
@@ -416,6 +474,50 @@
       <p>
         For any questions, reach out at <a href="mailto:info@medcaliper.co.uk">info@medcaliper.co.uk</a>.
       </p>
+    </div>
+
+    <div class="section" id="team">
+      <h2>Our Team</h2>
+      <p>
+        Meet the dedicated professionals behind medCaliper. Our multidisciplinary team brings together expertise in 
+        entrepreneurship, artificial intelligence, medical imaging, and clinical neurosurgery to revolutionize brain tumour care.
+      </p>
+      
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="NW-photo.jpg" alt="Navodini Wijethilake" class="team-photo">
+          <h4>Navodini Wijethilake</h4>
+          <div class="team-title">Entrepreneurial Lead</div>
+          <div class="team-description">
+            Navodini leads the entrepreneurial vision for medCaliper, driving the strategic development and 
+            commercialization of our AI-powered healthcare solutions. With extensive experience in healthcare 
+            innovation and business development, she ensures our technology translates into real-world impact 
+            for patients and clinicians.
+          </div>
+        </div>
+        
+        <div class="team-card">
+          <img src="TV-photo.png" alt="Tom Vercauteren" class="team-photo">
+          <h4>Professor Tom Vercauteren</h4>
+          <div class="team-title">Principal Scientific Advisor - Technical</div>
+          <div class="team-description">
+            Professor of Interventional Image Computing at King's College London, Tom brings world-class expertise 
+            in medical imaging and AI. His research focuses on developing advanced computational methods for 
+            image-guided interventions, ensuring medCaliper's technical foundation is built on cutting-edge science.
+          </div>
+        </div>
+        
+        <div class="team-card">
+          <img src="JS-photo.png" alt="Jonathan Shapey" class="team-photo">
+          <h4>Mr Jonathan Shapey</h4>
+          <div class="team-title">Principal Scientific Advisor - Clinical</div>
+          <div class="team-description">
+            Clinical Reader in Neurosurgery at King's College London and Honorary Consultant Neurosurgeon at 
+            King's College Hospital. Jonathan provides invaluable clinical insight, ensuring our AI tools meet 
+            real clinical needs and integrate seamlessly into neurosurgical practice.
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
