@@ -12,14 +12,32 @@
       margin: 0;
       font-family: 'Public Sans', sans-serif;
       background-color: #053c68;
+      background-image: url('neuroradiology-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
       color: #eaf3f4;
       line-height: 1.6;
       overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(5, 60, 104, 0.85);
+      z-index: -1;
+      pointer-events: none;
     }
 
     header {
       height: 60vh;
-      background-color: #243651;
+      background-color: rgba(36, 54, 81, 0.9);
       color: #eaf3f4;
       display: flex;
       flex-direction: column;
@@ -28,6 +46,7 @@
       padding: 1rem;
       text-align: center;
       box-shadow: 0 2px 10px rgba(7, 186, 181, 0.08);
+      backdrop-filter: blur(2px);
     }
 
     .logo {
@@ -71,13 +90,14 @@
     }
 
     .section {
-      background-color: #243651;
+      background-color: rgba(36, 54, 81, 0.95);
       border: 1px solid rgba(7, 186, 181, 0.12);
       padding: 2rem;
       border-radius: 20px;
       margin-bottom: 2.5rem;
       box-shadow: 0 4px 20px rgba(7, 186, 181, 0.03);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(5px);
     }
 
     .section:hover {
@@ -135,8 +155,9 @@
       font-size: 0.9rem;
       padding: 1.5rem 1rem;
       text-align: center;
-      background-color: #243651;
+      background-color: rgba(36, 54, 81, 0.95);
       color: #eaf3f4;
+      backdrop-filter: blur(2px);
     }
 
     @media (max-width: 600px) {
@@ -177,7 +198,7 @@
       <p>
         <strong>medCaliper</strong> is an AI-powered tool we're developing to support personalised brain tumour care.
         Our aim is to help make clinical decision-making more efficient and better aligned with patient needs.
-        This project is proudly backed by the <strong>King's College London LIHE Accelerator Programme</strong>.
+        This project is proudly backed by the <strong>King's Medtech Accelerator Programme delivered by London Institute for Healthcare Engineering and the Innovate UK - ICURe Programme. </strong>.
       </p>
     </div>
 
