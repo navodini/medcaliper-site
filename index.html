@@ -8,6 +8,10 @@
   <!-- Load Urbanist and Public Sans fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&family=Public+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: 'Public Sans', sans-serif;
@@ -36,7 +40,7 @@
     }
 
     header {
-      height: 60vh;
+      height: 100vh;
       background-color: rgba(36, 54, 81, 0.9);
       color: #eaf3f4;
       display: flex;
@@ -47,28 +51,59 @@
       text-align: center;
       box-shadow: 0 2px 10px rgba(7, 186, 181, 0.08);
       backdrop-filter: blur(2px);
+      position: relative;
     }
 
     .logo {
       max-width: 620px;
       width: 100%;
       height: auto;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     header p {
       font-family: 'Urbanist', sans-serif;
       font-style: italic;
       color: #eaf3f4;
-      font-size: 2rem;
+      font-size: 2.5rem;
       max-width: 90%;
+      margin-bottom: 3rem;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #07bab5;
+      font-size: 1.2rem;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      40% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      60% {
+        transform: translateX(-50%) translateY(-5px);
+      }
     }
 
     nav {
-      background-color: #053c68;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(5, 60, 104, 0.95);
       padding: 1rem;
       text-align: right;
       box-shadow: 0 2px 6px rgba(7, 186, 181, 0.1);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
     }
 
     nav a {
@@ -205,6 +240,14 @@
       .logo {
         max-width: 300px;
       }
+
+      header p {
+        font-size: 1.8rem;
+      }
+
+      .scroll-indicator {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -218,6 +261,9 @@
   <header>
     <img src="logo.svg" alt="MedCaliper Logo" class="logo">
     <p>Transforming brain tumour care</p>
+    <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView();">
+      ↓ Learn More ↓
+    </div>
   </header>
 
   <main>
