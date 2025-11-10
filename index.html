@@ -177,6 +177,13 @@
       backdrop-filter: blur(5px);
     }
 
+    .section.wide {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 2rem 3rem;
+    }
+
     .section:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 25px rgba(7, 186, 181, 0.07);
@@ -240,7 +247,7 @@
     .team-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      gap: 3rem;
       margin-top: 2rem;
     }
 
@@ -308,10 +315,26 @@
       text-align: left;
     }
 
+    @media (max-width: 1300px) {
+      .section.wide {
+        max-width: 95%;
+        padding: 2rem;
+      }
+
+      .team-grid {
+        gap: 2rem;
+      }
+    }
+
     @media (max-width: 900px) {
       .team-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+      }
+
+      .section.wide {
+        max-width: 900px;
+        padding: 2rem;
       }
     }
 
@@ -443,6 +466,43 @@
       </p>
     </div>
 
+    <div class="section wide" id="team">
+      <h2>Our Team</h2>
+      <p>
+        Meet the dedicated professionals behind medCaliper. Our multidisciplinary team brings together expertise in 
+        entrepreneurship, artificial intelligence, medical imaging, and clinical neurosurgery to revolutionize brain tumour care.
+      </p>
+      
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="NW-photo.png" alt="Navodini Wijethilake" class="team-photo">
+          <h4>Navodini Wijethilake</h4>
+          <div class="team-title">Entrepreneurial Lead</div>
+          <div class="team-description">
+            Postdoctoral researcher with 7 years of experience in AI-driven brain tumour imaging. Navodini leads the strategic vision and commercial development of MedCaliper.
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="TV-photo.png" alt="Tom Vercauteren" class="team-photo">
+          <h4>Professor Tom Vercauteren</h4>
+          <div class="team-title">Principal Scientific Advisor – Technical</div>
+          <div class="team-description">
+            Professor of Interventional Image Computing at King's College London. Tom provides technical leadership in AI and medical image computing.
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="JS-photo.png" alt="Jonathan Shapey" class="team-photo">
+          <h4>Mr Jonathan Shapey</h4>
+          <div class="team-title">Principal Scientific Advisor – Clinical</div>
+          <div class="team-description">
+            Clinical Reader in Neurosurgery at King's College London and Consultant Neurosurgeon at King's College Hospital. Jonathan ensures clinical relevance and seamless integration into care pathways.
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="section">
       <h2>Watch Our Video</h2>
       <div class="video-container">
@@ -481,43 +541,6 @@
       <p>
         For any questions, reach out at <a href="mailto:info@medcaliper.co.uk">info@medcaliper.co.uk</a>.
       </p>
-    </div>
-
-    <div class="section" id="team">
-      <h2>Our Team</h2>
-      <p>
-        Meet the dedicated professionals behind medCaliper. Our multidisciplinary team brings together expertise in 
-        entrepreneurship, artificial intelligence, medical imaging, and clinical neurosurgery to revolutionize brain tumour care.
-      </p>
-      
-      <div class="team-grid">
-        <div class="team-card">
-          <img src="NW-photo.png" alt="Navodini Wijethilake" class="team-photo">
-          <h4>Navodini Wijethilake</h4>
-          <div class="team-title">Entrepreneurial Lead</div>
-          <div class="team-description">
-            Postdoctoral researcher with 7 years of experience in AI-driven brain tumour imaging. Navodini leads the strategic vision and commercial development of MedCaliper.
-          </div>
-        </div>
-
-        <div class="team-card">
-          <img src="TV-photo.png" alt="Tom Vercauteren" class="team-photo">
-          <h4>Professor Tom Vercauteren</h4>
-          <div class="team-title">Principal Scientific Advisor – Technical</div>
-          <div class="team-description">
-            Professor of Interventional Image Computing at King’s College London. Tom provides technical leadership in AI and medical image computing.
-          </div>
-        </div>
-
-        <div class="team-card">
-          <img src="JS-photo.png" alt="Jonathan Shapey" class="team-photo">
-          <h4>Mr Jonathan Shapey</h4>
-          <div class="team-title">Principal Scientific Advisor – Clinical</div>
-          <div class="team-description">
-            Clinical Reader in Neurosurgery at King’s College London and Consultant Neurosurgeon at King’s College Hospital. Jonathan ensures clinical relevance and seamless integration into care pathways.
-          </div>
-        </div>
-      </div>
     </div>
   </main>
 
