@@ -59,6 +59,17 @@
       width: 100%;
       height: auto;
       margin-bottom: 2rem;
+      transition: all 0.6s ease;
+    }
+
+    .logo.moving {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      width: 120px;
+      max-width: 120px;
+      z-index: 1001;
+      margin-bottom: 0;
     }
 
     header p {
@@ -112,7 +123,7 @@
       height: 40px;
       width: auto;
       opacity: 0;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.6s ease 0.3s;
     }
 
     .nav-logo.visible {
@@ -263,6 +274,13 @@
         max-width: 300px;
       }
 
+      .logo.moving {
+        width: 80px;
+        max-width: 80px;
+        top: 0.5rem;
+        left: 0.5rem;
+      }
+
       header p {
         font-size: 1.8rem;
       }
@@ -284,11 +302,8 @@
   </nav>
 
   <header>
-    <img src="logo.svg" alt="MedCaliper Logo" class="logo">
+    <img src="logo.svg" alt="MedCaliper Logo" class="logo" id="mainLogo">
     <p>Transforming brain tumour care</p>
-    <!-- <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView();">
-      ↓ Learn More ↓ -->
-    </div>
   </header>
 
   <main>
@@ -395,14 +410,27 @@
   <script>
     window.addEventListener('scroll', function() {
       const navLogo = document.getElementById('navLogo');
+      const mainLogo = document.getElementById('mainLogo');
       const scrollPosition = window.scrollY;
       const viewportHeight = window.innerHeight;
+      const triggerPoint = viewportHeight * 0.5;
+      const completePoint = viewportHeight * 0.8;
       
-      // Show logo when scrolled past the first page (header section)
-      if (scrollPosition > viewportHeight * 0.8) {
-        navLogo.classList.add('visible');
+      if (scrollPosition > triggerPoint) {
+        mainLogo.classList.add('moving');
+        
+        // Show nav logo only after animation completes
+        if (scrollPosition > completePoint) {
+          navLogo.classList.add('visible');
+          mainLogo.style.opacity = '0';
+        } else {
+          navLogo.classList.remove('visible');
+          mainLogo.style.opacity = '1';
+        }
       } else {
+        mainLogo.classList.remove('moving');
         navLogo.classList.remove('visible');
+        mainLogo.style.opacity = '1';
       }
     });
   </script>
