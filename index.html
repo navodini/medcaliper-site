@@ -239,7 +239,7 @@
 
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
       margin-top: 2rem;
     }
@@ -306,6 +306,13 @@
       color: #eaf3f4;
       line-height: 1.6;
       text-align: left;
+    }
+
+    @media (max-width: 900px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
     }
 
     @media (max-width: 600px) {
@@ -485,14 +492,12 @@
       
       <div class="team-grid">
         <div class="team-card">
-          <img src="NW-photo.jpg" alt="Navodini Wijethilake" class="team-photo">
+          <img src="NW-photo.png" alt="Navodini Wijethilake" class="team-photo">
           <h4>Navodini Wijethilake</h4>
           <div class="team-title">Entrepreneurial Lead</div>
           <div class="team-description">
             Navodini leads the entrepreneurial vision for medCaliper, driving the strategic development and 
-            commercialization of our AI-powered healthcare solutions. With extensive experience in healthcare 
-            innovation and business development, she ensures our technology translates into real-world impact 
-            for patients and clinicians.
+            commercialization of our AI-powered healthcare solutions. 
           </div>
         </div>
         
@@ -502,8 +507,7 @@
           <div class="team-title">Principal Scientific Advisor - Technical</div>
           <div class="team-description">
             Professor of Interventional Image Computing at King's College London, Tom brings world-class expertise 
-            in medical imaging and AI. His research focuses on developing advanced computational methods for 
-            image-guided interventions, ensuring medCaliper's technical foundation is built on cutting-edge science.
+            in medical imaging and AI. 
           </div>
         </div>
         
