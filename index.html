@@ -259,153 +259,7 @@
       font-weight: bold;
       text-decoration: none;
       transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    .feedback-link:hover {
-      background: #eaf3f4;
-      transform: scale(1.05);
-    }
-
-    footer {
-      font-size: 0.9rem;
-      padding: 1.5rem 1rem;
-      text-align: center;
-      background-color: rgba(36, 54, 81, 0.95);
-      color: #eaf3f4;
-      backdrop-filter: blur(2px);
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3rem;
-      margin-top: 2rem;
-    }
-
-    .team-member {
-      background-color: rgba(5, 60, 104, 0.3);
-      padding: 1.5rem;
-      border-radius: 15px;
-      border: 1px solid rgba(7, 186, 181, 0.2);
-    }
-
-    .team-member h4 {
-      font-family: 'Urbanist', sans-serif;
-      color: #07bab5;
-      margin-top: 0;
-      font-size: 1.2rem;
-    }
-
-    .team-member .role {
-      color: #eaf3f4;
-      font-style: italic;
-      margin-bottom: 1rem;
-    }
-
-    .team-card {
-      background-color: rgba(5, 60, 104, 0.4);
-      padding: 2rem;
-      border-radius: 20px;
-      border: 1px solid rgba(7, 186, 181, 0.2);
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .team-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(7, 186, 181, 0.15);
-    }
-
-    .team-photo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 1.5rem;
-      border: 3px solid #07bab5;
-      display: block;
-    }
-
-    .team-card h4 {
-      font-family: 'Urbanist', sans-serif;
-      color: #07bab5;
-      margin: 0 0 0.5rem 0;
-      font-size: 1.4rem;
-    }
-
-    .team-title {
-      color: #eaf3f4;
-      font-style: italic;
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
-
-    .team-description {
-      color: #eaf3f4;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    /* Improved mobile navigation with hamburger menu */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-      padding: 10px;
-    }
-
-    .hamburger span {
-      width: 25px;
-      height: 3px;
-      background-color: #07bab5;
-      border-radius: 3px;
-      transition: all 0.3s ease;
-    }
-
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px);
-    }
-
-    @media (max-width: 1300px) {
-      main {
-        max-width: 95%;
-        padding: 2rem;
-      }
-
-      .section.wide {
-        max-width: 95%;
-        padding: 2rem;
-      }
-
-      .team-grid {
-        gap: 2rem;
-      }
-    }
-
-    @media (max-width: 900px) {
-      main {
-        max-width: 900px;
-        padding: 2rem;
-      }
-
-      .team-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .section.wide {
-        max-width: 900px;
-        padding: 2rem;
-      }
+      box-sizing: border-box;
     }
 
     @media (max-width: 600px) {
@@ -528,10 +382,15 @@
       }
 
       .feedback-link {
-        width: 100%;
+        display: block;
+        width: calc(100% - 0px);
+        max-width: 100%;
         text-align: center;
-        padding: 1rem 1.5rem;
-        font-size: 1rem;
+        padding: 1rem 1rem;
+        font-size: 0.95rem;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0;
       }
 
       .video-container {
@@ -566,6 +425,11 @@
       .team-photo {
         width: 80px;
         height: 80px;
+      }
+
+      .feedback-link {
+        padding: 0.85rem 0.75rem;
+        font-size: 0.9rem;
       }
     }
 
