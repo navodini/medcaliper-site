@@ -278,7 +278,7 @@
 
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 3rem;
       margin-top: 2rem;
     }
@@ -389,6 +389,12 @@
 
       .team-grid {
         gap: 2rem;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -587,12 +593,6 @@
         gap: 1.5rem;
       }
 
-      .team-card:last-child {
-        grid-column: span 2;
-        max-width: 50%;
-        margin: 0 auto;
-      }
-
       header p {
         font-size: 2rem;
       }
@@ -683,7 +683,7 @@
       <h2>Our Team</h2>
       <p>
         Meet the dedicated professionals behind medCaliper. Our multidisciplinary team brings together expertise in 
-        entrepreneurship, artificial intelligence, medical imaging, and clinical neurosurgery to revolutionize brain tumour care.
+        entrepreneurship, artificial intelligence, medical imaging, and clinical neurosurgery to revolutionise brain tumour care.
       </p>
       
       <div class="team-grid">
@@ -692,7 +692,16 @@
           <h4>Navodini Wijethilake</h4>
           <div class="team-title">Entrepreneurial Lead</div>
           <div class="team-description">
-            Postdoctoral researcher with 7 years of experience in AI-driven brain tumour imaging. Navodini leads the strategic vision and commercial development of MedCaliper.
+            Postdoctoral researcher with 8 years' experience in AI-driven brain tumour imaging. Navodini leads the strategic vision and commercial development of MedCaliper.
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="theo_white_background.png" alt="Theodore Barfoot" class="team-photo">
+          <h4>Theodore Barfoot</h4>
+          <div class="team-title">Technical Lead</div>
+          <div class="team-description">
+            Postdoctoral researcher with 10 years' experience in medical imaging physics and AI software development. Theo leads the technical development of MedCaliper.
           </div>
         </div>
 
