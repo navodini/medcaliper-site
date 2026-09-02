@@ -24,11 +24,11 @@ Then open <http://127.0.0.1:8765/>.
 
 ## Activate analytics
 
-Analytics is deliberately inactive until a real Google Analytics 4 property is connected.
+Analytics is connected to Google Analytics 4 and remains blocked until a visitor accepts optional analytics.
 
 1. Create or select a GA4 web data stream for `https://www.medcaliper.co.uk/`.
 2. Open `analytics.js`.
-3. Replace `G-XXXXXXXXXX` with the stream's Measurement ID.
+3. The configured stream Measurement ID is stored in `analytics.js`.
 4. Confirm the GA4 retention and data-sharing settings.
 5. Update the cookie duration and provider details in `privacy.html` if they differ from the notice.
 6. Test consent acceptance, rejection and withdrawal before publishing.

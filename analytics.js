@@ -3,7 +3,7 @@
  *
  * Activation:
  * 1. Create a Google Analytics 4 property for medcaliper.co.uk.
- * 2. Replace G-XXXXXXXXXX below with its Measurement ID.
+ * 2. Set the Measurement ID in the constant below.
  * 3. Keep the privacy notice in privacy.html aligned with your property settings.
  *
  * The Google tag is not requested until a visitor explicitly accepts analytics.
@@ -12,7 +12,7 @@
   "use strict";
 
   const CONSENT_KEY = "medcaliper_analytics_consent_v1";
-  const MEASUREMENT_ID = "G-XXXXXXXXXX";
+  const MEASUREMENT_ID = "G-WNJ0Q1ZYFJ";
   let analyticsLoaded = false;
 
   const hasValidMeasurementId = () =>
