@@ -9,6 +9,61 @@
   const heroBrand = document.getElementById("heroBrand");
   const analytics = window.MedCaliperAnalytics;
 
+  const scrollToAnchor = (anchor) => {
+    const href = anchor.getAttribute("href");
+    if (!href || href === "#" || !href.startsWith("#")) return false;
+
+    const target = document.getElementById(href.slice(1));
+    if (!target) return false;
+
+    const heading = target.querySelector(".section-heading, .story-copy") || target;
+    heading.classList.add("is-visible");
+    const offset = (nav?.offsetHeight || 78) + 20;
+    const top = Math.max(0, heading.getBoundingClientRect().top + window.scrollY - offset);
+
+    window.history.pushState(null, "", href);
+    window.scrollTo({ top, behavior: "auto" });
+    return true;
+  };
+
+  document.addEventListener("click", (event) => {
+    const anchor = event.target.closest("a[href^=\"#\"]");
+    if (!anchor) return;
+
+    const target = document.getElementById(anchor.getAttribute("href").slice(1));
+    if (!target) return;
+
+    event.preventDefault();
+    closeMenu();
+
+    const measureAndScroll = () => {
+      requestAnimationFrame(() => scrollToAnchor(anchor));
+    };
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(measureAndScroll);
+    } else {
+      measureAndScroll();
+    }
+  });
+
+  const alignInitialHash = () => {
+    if (!window.location.hash) return;
+    const anchor = Array.from(document.querySelectorAll("a[href^=\"#\"]")).find(
+      (candidate) => candidate.getAttribute("href") === window.location.hash
+    );
+    if (anchor) scrollToAnchor(anchor);
+  };
+
+  if (window.location.hash) {
+    const alignAfterFonts = () => requestAnimationFrame(alignInitialHash);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(alignAfterFonts);
+    } else {
+      alignAfterFonts();
+    }
+  }
+
   const closeMenu = () => {
     if (!menuToggle || !navLinks) return;
     menuToggle.setAttribute("aria-expanded", "false");

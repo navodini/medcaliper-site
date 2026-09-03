@@ -100,6 +100,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-height);
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
 }
 
 body {
@@ -750,6 +753,10 @@ a {
 }
 
 /* Shared sections */
+main section[id] {
+  scroll-margin-top: -105px;
+}
+
 .section {
   position: relative;
   padding: 125px 0;
@@ -1097,6 +1104,11 @@ a {
 }
 
 /* Team */
+.team-section .section-heading {
+  margin-bottom: 52px;
+  max-width: 1180px;
+}
+
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1119,6 +1131,7 @@ a {
 }
 
 .team-photo-wrap {
+  max-width: 176px;
   --portrait-scale: 1;
   --portrait-hover-scale: 1.035;
   position: relative;
@@ -1815,6 +1828,10 @@ a {
 
 /* Responsive */
 @media (max-width: 1100px) {
+  main section[id] {
+    scroll-margin-top: -75px;
+  }
+
   .hero {
     height: auto;
     min-height: 820px;
@@ -1988,6 +2005,10 @@ a {
 }
 
 @media (max-width: 600px) {
+  main section[id] {
+    scroll-margin-top: -58px;
+  }
+
   .page-shell,
   .nav-inner {
     width: min(calc(100% - 32px), var(--shell));
