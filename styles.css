@@ -99,7 +99,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--nav-height) + 24px);
+  scroll-padding-top: var(--nav-height);
 }
 
 body {
